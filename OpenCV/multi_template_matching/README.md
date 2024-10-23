@@ -53,7 +53,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-opencv = "0.92.2"```
+opencv = "0.92.2"
+```
 
 ## Contact
 
