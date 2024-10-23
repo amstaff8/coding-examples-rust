@@ -14,13 +14,13 @@ The program:
 ## Input and Output Images
 
 1. **Source Image**: The larger image where the template will be searched:
-   ![Source Image](.source.png)
+   ![Source Image](source.png)
 
 2. **Template Image**: The smaller image that the program attempts to match within the source:
-   ![Template Image](.template.png)
+   ![Template Image](template.png)
 
 3. **Output Image**: The result of the program, showing the matched template locations outlined in red:
-   ![Output Image](.output.png)
+   ![Output Image](output.png)
 
 ## Example Workflow
 
@@ -53,7 +53,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-opencv = "0.92.2"
+opencv = "0.92.2"```
 
 ## Contact
 
