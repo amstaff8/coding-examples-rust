@@ -1,0 +1,23 @@
+[package]
+name = "stm32f303re"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Only set the critical section feature, if you are using a bare-metal platform
+# without any RTOS
+# See https://github.com/rust-embedded/critical-section for further details.
+cortex-m = { version = "0.7.6", features = ["critical-section-single-core"]}
+cortex-m-rt = { version = "0.7.3", features = ["device"] }
+# Panic behavior, see https://crates.io/keywords/panic-impl for alternatives
+panic-halt = "1.0.0"
+
+# Replace stm32f303xc with your target chip, see
+# https://docs.rs/stm32f3xx-hal/latest/stm32f3xx_hal/#target-chip-selection for more info
+stm32f3xx-hal = { version = "0.10.0", features = ["ld", "rt", "stm32f303xe"] }
+critical-section = "1.0"
+panic-semihosting = "0.6.0"
+
+# Optional dependencies for printing debug messages
+defmt = { version = "1.0.1" }
+rtt-target = { version = "0.6", features = ["defmt"] }
