@@ -9,7 +9,7 @@ Thanks to the broader [stm32-rs project](https://github.com/stm32-rs),
 the code can be easily adapted to other microcontrollers within the STM32 family.
 
 <p align="left">
-  <img src="images/nucleo.jpg" alt="ST_LINK Clock Source" width="35%"/>
+  <img src="images/nucleo.jpg" alt="ST_LINK Clock Source" width="50%"/>
 </p>
 
 ## How It Works
@@ -40,14 +40,14 @@ For this reason, we configure the clock using `bypass_hse`, which tells the micr
 that the clock signal comes from a signal generator rather than a crystal oscillator.
 
 <p align="left">
-  <img src="images/st_link_clock.png" alt="ST_LINK Clock Source" width="35%"/>
+  <img src="images/st_link_clock.png" alt="ST_LINK Clock Source" width="50%"/>
 </p>
 
 Below is part of the STM32F303RE microcontroller circuit.  
 On the left, you can see the MCO line from the ST_LINK, which carries the 8 MHz clock signal.
 
 <p align="left">
-  <img src="images/micro_clock.png" alt="ST_LINK Clock Source" width="35%"/>
+  <img src="images/micro_clock.png" alt="ST_LINK Clock Source" width="50%"/>
 </p>
 
 ## Input Handling
@@ -58,7 +58,7 @@ Therefore, we do not need to enable the internal pull-up in the firmware.
 We simply configure it using `into_floating_input`.
 
 <p align="left">
-  <img src="images/input.png" alt="ST_LINK Clock Source" width="35%"/>
+  <img src="images/input.png" alt="ST_LINK Clock Source" width="50%"/>
 </p>
 
 Note that the interrupt for pin PC13 is managed by the **EXTI13** register  
@@ -69,10 +69,10 @@ If you enable the interrupt for PC13, you cannot enable it simultaneously for PA
 However, since the board only uses PC13, this is not an issue.
 
 <p align="left">
-  <img src="images/exticr4.png" alt="ST_LINK Clock Source" width="35%"/>
+  <img src="images/exticr4.png" alt="ST_LINK Clock Source" width="50%"/>
 </p>
 <p align="left">
-  <img src="images/exti13.png" alt="ST_LINK Clock Source" width="35%"/>
+  <img src="images/exti13.png" alt="ST_LINK Clock Source" width="50%"/>
 </p>
 
 Note that EXTI lines 10 through 15 (including EXTI13) share a single interrupt: **EXTI15_10**.  
@@ -84,7 +84,7 @@ not from another line like EXTI11.
 From the schematic, we can see that the green LED is connected to pin **PA5**.
 
 <p align="left">
-  <img src="images/led.png" alt="ST_LINK Clock Source" width="35%"/>
+  <img src="images/led.png" alt="ST_LINK Clock Source" width="50%"/>
 </p>
 
 ## Installation
@@ -109,11 +109,11 @@ to allow building and debugging the firmware,
 setting breakpoints, and viewing debug output.
 
 <p align="left">
-  <img src="images/breakpoint.png" alt="ST_LINK Clock Source" width="35%"/>
+  <img src="images/breakpoint.png" alt="ST_LINK Clock Source" width="50%"/>
 </p>
 
 <p align="left">
-  <img src="images/print.png" alt="ST_LINK Clock Source" width="35%"/>
+  <img src="images/print.png" alt="ST_LINK Clock Source" width="50%"/>
 </p>
 
 ### Dependencies
